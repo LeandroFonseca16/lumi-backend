@@ -5,12 +5,14 @@ import morgan from 'morgan';
 import helmet from 'helmet';
 import customer_router from './routers/customer_router';
 import chart_router from './routers/chart_router';
+import invoices_router from './routers/invoices_router';
 
 
 const app = express();
 
 app.use('/customers/', customer_router);
 app.use('/chart/', chart_router);
+app.use('/invoices/', invoices_router);
 
 app.use(morgan('tiny'));
 
